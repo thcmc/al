@@ -1,0 +1,127 @@
+body {
+	background-color: 
+}
+h2 {vertical-align: middle;}
+
+.mainTitle {
+	font-family: 'Gilda Display', serif;
+}
+#nestedHours {
+	background: rgba(0, 0, 0, .8);
+	vertical-align: middle;
+	text-align: center;
+	margin: 20px;
+}
+#nestedHours h4 {
+	margin-top: 4px;
+	font-family: 'Allura', cursive;
+}
+#nestedHours p {
+	margin: 0px;
+}
+
+#leftLarge {
+	/* border: 2px groove #FF0700; */
+	height: auto;
+	text-align: right;
+}
+#rightLarge {
+	height: auto;
+
+}
+#rightLarge h4{
+	font-family: 'Allura', cursive;
+	color: #FF0700;
+	text-align: center;
+}
+#leftLarge h4{
+	font-family: 'Allura', cursive;
+	color: #FF0700;
+	text-align: center;
+
+}
+#leftLarge h6 {font-family: 'Gilda Display', serif;}
+#rightLarge h6 {font-family: 'Gilda Display', serif;}
+.bg {
+  min-height: 100%;
+  min-width: 1024px;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrap {
+  margin-top: 5px;	
+  background: rgba(0, 0, 0, .4); /* rgba(200, 54, 54, 0.5); */
+  color: #FF0700;
+  border: 2px groove #FF0700;
+
+}
+
+#picsCarousel {
+	padding: 8px;
+	background-color: rgba(0, 0, 0, .4);
+	border-right: 2px groove #FF0700;
+	border-left: 2px groove #FF0700;
+	border-bottom: 2px groove #FF0700;
+}
+#smxsBanner{
+	background-color:#000000;
+	color: #fff;
+	margin: 1px;
+	text-align: center;
+}
+#smxsBanner h4 {font-family: 'Allura', cursive; color: #FF0700;}
+#smxsBanner h6 {font-family: 'Gilda Display', serif;}
+
+#smxsBanner #leftBanner1 { margin: 12px;}
+#smxsBanner #rightBanner1 { background-color:#000000; margin: 12px;}
+
+#leftBanner1 {
+	background-color:#000000;
+	color: #fff;
+	margin: 1px;
+}
+
+#rightBanner1 {
+	background-color:#000000;
+	color: #fff;
+	margin: 1px;
+}
+#bottomAd1 {
+	margin-top: 5px;
+	height: 60px;
+	border-top: 2px groove #FF0700;
+	border-left: 2px groove #FF0700;
+	border-bottom: 2px groove #FF0700;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	vertical-align: middle;
+}
+#bottomAd2 {
+	margin-top: 5px;
+	height: 60px;
+	border-top: 2px groove #FF0700;
+	border-bottom: 2px groove #FF0700;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	vertical-align: middle;
+}
+#bottomAd3 {
+	margin-top: 5px;
+	height: 60px;
+	border-top: 2px groove #FF0700;
+	border-right: 2px groove #FF0700;
+	border-bottom: 2px groove #FF0700;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	vertical-align: middle;
+}
+#foot {
+	text-align: center;
+	font-family: 'Gilda Display', serif;
+}
