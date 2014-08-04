@@ -2,7 +2,7 @@
 
 module.exports = {
 	app: {
-		title: 'ALBERTS | Dormont',
+		title: 'Albert\'s | Dormont',
 		description: 'Pittsburgh, PA bar located directly off the Potamac Avenue subway stop in Dormont.  Serving 20+ drafts of fresh craft and traditional beers, a wide selection of domestic and import bottles, full liquor selection, wine.  Growlers and six-packs are available for takeout.',
 		keywords: 'Dormont Bar, Dormont Beer, six packs Dormont, Beer Specials Dormont'
 	},

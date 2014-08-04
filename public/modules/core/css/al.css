@@ -1,127 +1,61 @@
-body {
-	background-color: 
-}
+body {background-color:}
+
+.bg { min-height: 100%; min-width: 1024px; width: 100%; height: auto; position: fixed; top: 0; left: 0;}
+
+#wrap {margin-top: 5px;	background: rgba(0, 0, 0, .4); /* rgba(200, 54, 54, 0.5); */color: #FF0700;border: 2px groove #FF0700;}
+
 h2 {vertical-align: middle;}
 
-.mainTitle {
-	font-family: 'Gilda Display', serif;
-}
-#nestedHours {
-	background: rgba(0, 0, 0, .8);
-	vertical-align: middle;
-	text-align: center;
-	margin: 20px;
-}
-#nestedHours h4 {
-	margin-top: 4px;
-	font-family: 'Allura', cursive;
-}
-#nestedHours p {
-	margin: 0px;
-}
 
-#leftLarge {
-	/* border: 2px groove #FF0700; */
-	height: auto;
-	text-align: right;
-}
-#rightLarge {
-	height: auto;
+.mainTitle {font-family: 'Gilda Display', serif;}
 
-}
-#rightLarge h4{
-	font-family: 'Allura', cursive;
-	color: #FF0700;
-	text-align: center;
-}
-#leftLarge h4{
-	font-family: 'Allura', cursive;
-	color: #FF0700;
-	text-align: center;
+#nestedHours {background: rgba(0, 0, 0, .8);vertical-align: middle;text-align: center;margin: 20px;}
+#nestedHours h4 {margin-top: 4px;font-family: 'Allura', cursive;}
+#nestedHours p {margin: 0px;}
 
-}
-#leftLarge h6 {font-family: 'Gilda Display', serif;}
-#rightLarge h6 {font-family: 'Gilda Display', serif;}
-.bg {
-  min-height: 100%;
-  min-width: 1024px;
+.leftLarge {/* border: 2px groove #FF0700; */height: inherit; background: black;}
+.leftLarge h4{font-family: 'Allura', cursive; color: white; text-align: center;}
+.leftLarge h5{color: #FF0700; text-align: center;}
+.leftLarge h6 {font-family: 'Gilda Display', serif;}
 
-  width: 100%;
-  height: auto;
+.smxsBanner .leftBanner1 { margin: 12px;}
+.leftBanner1 {background-color:#000000;color: #fff;margin: 1px;}
 
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
-#wrap {
-  margin-top: 5px;	
-  background: rgba(0, 0, 0, .4); /* rgba(200, 54, 54, 0.5); */
-  color: #FF0700;
-  border: 2px groove #FF0700;
+.rightLarge {height: auto;}
+.rightLarge h4{font-family: 'Allura', cursive; color: white; text-align: center; }
+.rightLarge h5{color: #FF0700; text-align: center;}
+.rightLarge h6 {font-family: 'Gilda Display', serif;}
 
-}
+.smxsBanner .rightBanner1 { background-color:#000000; margin: 12px;}
+.rightBanner1 {background-color:#000000;color: #fff;margin: 1px;}
 
-#picsCarousel {
-	padding: 8px;
-	background-color: rgba(0, 0, 0, .4);
-	border-right: 2px groove #FF0700;
-	border-left: 2px groove #FF0700;
-	border-bottom: 2px groove #FF0700;
-}
-#smxsBanner{
-	background-color:#000000;
-	color: #fff;
-	margin: 1px;
-	text-align: center;
-}
-#smxsBanner h4 {font-family: 'Allura', cursive; color: #FF0700;}
-#smxsBanner h6 {font-family: 'Gilda Display', serif;}
+.smxsBanner{background-color:#000000;margin: 1px;text-align: center; background: none; margin-top: 3px;}
+.smxsBanner h4 {font-family: 'Allura', cursive; color: #FF0700;}
+.smxsBanner h6 {font-family: 'Gilda Display', serif;}
 
-#smxsBanner #leftBanner1 { margin: 12px;}
-#smxsBanner #rightBanner1 { background-color:#000000; margin: 12px;}
 
-#leftBanner1 {
-	background-color:#000000;
-	color: #fff;
-	margin: 1px;
-}
 
-#rightBanner1 {
-	background-color:#000000;
-	color: #fff;
-	margin: 1px;
-}
-#bottomAd1 {
-	margin-top: 5px;
-	height: 60px;
-	border-top: 2px groove #FF0700;
-	border-left: 2px groove #FF0700;
-	border-bottom: 2px groove #FF0700;
+
+
+#picsCarousel {padding: 8px;background-color: rgba(0, 0, 0, .4);border-right: 2px groove #FF0700;border-left: 2px groove #FF0700;border-bottom: 2px groove #FF0700;}
+.belowCarousel {background-color: black; color: white; text-align: center;}
+
+
+#bottomAd1 {margin-top: 5px; height: 60px;
+	border-top: 2px groove #FF0700; border-left: 2px groove #FF0700; border-bottom: 2px groove #FF0700;
 	background: rgba(0, 0, 0, .4);
-	text-align: center;
-	vertical-align: middle;
+	text-align: center;vertical-align: middle;
 }
-#bottomAd2 {
-	margin-top: 5px;
-	height: 60px;
-	border-top: 2px groove #FF0700;
-	border-bottom: 2px groove #FF0700;
+#bottomAd2 {margin-top: 5px; height: 60px;
+	border-top: 2px groove #FF0700; border-bottom: 2px groove #FF0700;
 	background: rgba(0, 0, 0, .4);
-	text-align: center;
-	vertical-align: middle;
+	text-align: center;vertical-align: middle;
 }
-#bottomAd3 {
-	margin-top: 5px;
-	height: 60px;
-	border-top: 2px groove #FF0700;
-	border-right: 2px groove #FF0700;
-	border-bottom: 2px groove #FF0700;
+#bottomAd3 {margin-top: 5px; height: 60px;
+	border-top: 2px groove #FF0700; border-right: 2px groove #FF0700; border-bottom: 2px groove #FF0700;
 	background: rgba(0, 0, 0, .4);
-	text-align: center;
-	vertical-align: middle;
+	text-align: center;vertical-align: middle;
 }
-#foot {
-	text-align: center;
-	font-family: 'Gilda Display', serif;
-}
+
+.foot {text-align: center;font-family: 'Gilda Display', serif;}

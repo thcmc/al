@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://alberts:F1la50won@ds035617.mongolab.com:35617/albertsdormont',
 	app: {
-		title: 'ALBERTS | Dormont'
+		title: 'Albert\'s | Dormont'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '613888522032151',
