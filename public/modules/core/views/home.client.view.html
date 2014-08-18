@@ -28,7 +28,10 @@
     </span>
     </div>
     <div class="col-md-2 hidden-xs hidden-sm">
-        <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=21&l=ur1&category=kitchen&banner=16YJ90NQST9G4GR8SDG2&f=ifr" width="auto" height="110" scrolling="no" marginwidth="0" frameborder="0"></iframe>
+    <iframe src="
+//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetAdHtml&ID=OneJS&OneJS=1&banner_type=setandforget&campaigns=primeent&placement=assoc_banner_placement_default&region=US&marketplace=amazon&tracking_id=albslou-20&ad_type=banner&height=125&width=125&linkid=MVOWHECGSFDO3WY5&f=ifr
+" width="125" height="125" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        <!-- <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=21&l=ur1&category=kitchen&banner=16YJ90NQST9G4GR8SDG2&f=ifr" width="auto" height="110" scrolling="no" marginwidth="0" frameborder="0"></iframe> -->
     </div>
 </div>
 
@@ -38,29 +41,11 @@
 
     <!-- medium -->   
     <section class="col-xs-3 col-md-2 hidden-xs hidden-sm leftLarge">
-        <div class="row">
-            <div class="col-md-12 leftBanner1">
-                <h4>Monday</h4>
-                <h5>$3 Magic Hat drafts</h5>
+        <div class="row" ng-controller="dailySpecialsCtrl">
+            <div class="col-md-12 leftBanner1" ng-repeat="special in specials">
+                <h4>{{special.day}}</h4>
+                <h5>{{special.offer}}</h5>
                 <hr>
-                <h4>Tuesday</h4>
-                <h5>Ladies Night [9pm-12a]</h5>
-                <hr>
-                <h4>Wednesday</h4>
-                <h5>1/2 off well drinks!
-                <br>$1 off Penn Drafts</h5>
-                <hr>
-                <h4>Thursday</h4>
-                <h5>$4 Yeungling CANS [24oz]</h5>
-                <hr>
-                <h4>Friday</h4>
-                <h5>$2 Coors Light Bottles</h5>
-                <hr>
-                <h4>Saturday</h4>
-                <h5>$2.50 Yuengling drafts [16oz]</h5>
-                <hr>
-                <h4>Sunday</h4>
-                <h5>$3 Blue Moon</h5>
             </div>
         </div>
     </section>
@@ -87,29 +72,11 @@
 
     <!-- days specials, xs + sm -->
     <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner">
-        <div class="row">
-            <div class="col-md-12 leftBanner1">
-                <h4>Monday</h4>
-                <h5>$3 Magic Hat drafts</h5>
+        <div class="row" ng-controller="dailySpecialsCtrl">
+            <div class="col-md-12 leftBanner1" ng-repeat="special in specials">
+                <h4>{{special.day}}</h4>
+                <h5>{{special.offer}}</h5>
                 <hr>
-                <h4>Tuesday</h4>
-                <h5>Ladies Night [9pm-12a]</h5>
-                <hr>
-                <h4>Wednesday</h4>
-                <h5>1/2 off well drinks!
-                <br>$1 off Penn Drafts</h5>
-                <hr>
-                <h4>Thursday</h4>
-                <h5>$4 Yeungling CANS [24oz]</h5>
-                <hr>
-                <h4>Friday</h4>
-                <h5>$2 Coors Light Bottles</h5>
-                <hr>
-                <h4>Saturday</h4>
-                <h5>$2.50 Yuengling drafts [16oz]</h5>
-                <hr>
-                <h4>Sunday</h4>
-                <h5>$3 Blue Moon</h5>
             </div>
         </div>
     </section>
@@ -124,9 +91,8 @@
         <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=42&l=ur1&category=amazonhomepage&f=ifr" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
     </aside>
 
-    
+    <!-- mobile ads on lg and md -->
     <aside class="col-xs-3 col-md-2 hidden-xs hidden-sm rightLarge">
-        <!-- mobile ad -->
         <div class="col-md-12 rightBanner1">
             <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=albslou-20&marketplace=amazon&region=US&placement=B004A29QF4&asins=B004A29QF4&linkId=&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066C0&bg_color=000000"></iframe>
         </div>
@@ -136,7 +102,84 @@
     </aside>
     
 </div>
+
+<!-- footer -->
 <div class="row"></div>
-<footer class="col-lg-12 foot">
-    <h5>Website by <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a></h5>
-</footer>
+<div class="col-lg-12 foot row" ng-controller="steelersScheduleCtrl">
+    <h5 class="CMClink">Website by <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a></h5>
+
+    <div class="col-md-12 espnTicker" align="center">
+        <iframe src="http://espn.go.com/bottomline/espnewsbottomlinebasic.html" width="640" height="48" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </div>
+   
+
+    <hr>
+    
+    <section class="col-md-8 trainStopCallout" align="left">
+        <h4>Headed into the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4>
+        <h2 align="center">Take the Train from Albert's Lounge!</h2>
+        <img src="/modules/core/img/trainad.png">
+        <div class="trainContent">
+            <p><address>2856 Broadway Avenue, Pittsburgh, PA 15216</address> 
+            By TRAIN: <b>42 South Hills Village,  Potomac Avenue stop.</b>
+            <br>
+            We are in Dormont at the corner of Broadway and Potomac Avenue, steps from the Potomac Avenue train station.  
+            <br>
+            <br>
+            Make us your pre-game stop and ride safely into the city via public transportation.  We are directly across from the Cogo's.         
+            <br>
+            <br>
+            Can't stay long?  Take home a Gallon-sized Growlers of fresh draft beer.
+            </p>
+        </div>
+    </section>
+
+    <!-- steeler schedule -->
+    <aside class="col-md-4" align="center">
+        <div class="col-md-11 footballCallout">
+        <h6><b><i>ARE YOU READY FOR</i></b></h6>
+        <h4>STEELER FOOTBALL !</h4>
+        <div ng-repeat="item in items">
+            <a href="{{item.url}}">{{item.title}}</a><img src="{{item.img}}" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"/><br>
+        </div> 
+        <table align="center">
+            <thead>
+                <tr>
+                    <td>Wk</td>
+                    <td>Date</td>
+                    <td>Opponent</td>
+                    <td>Time (ET)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="game in games" >
+                    <td class="{{game.where}}">{{game.wk}}</td>
+                    <td class="{{game.where}}">{{game.date}}</td>
+                    <td class="{{game.where}}">{{game.opponent}}</td>
+                    <td class="{{game.where}}">{{game.time}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i>Home games in yellow</i></p>
+        </div>
+    </aside>
+
+    <!-- beerLogos -->
+<!--     <aside class="col-md-12 beerLogos">
+    <ul>
+        <li><img src="/modules/core/img/beers/atwater.png"></li>
+        <li><img src="/modules/core/img/beers/bluemoon.png"></li>
+        <li><img src="/modules/core/img/beers/harpoon.png"></li>
+        <li><img src="/modules/core/img/beers/magichat.png"></li>
+        <li><img src="/modules/core/img/beers/palm.png"></li>
+        <li><img src="/modules/core/img/beers/penn.png"></li>
+        <li><img src="/modules/core/img/beers/reds.png"></li>
+        <li><img src="/modules/core/img/beers/sn.png"></li>
+        <li><img src="/modules/core/img/beers/southerntier.png"></li>
+        <li><img src="/modules/core/img/beers/yeungling.jpg"></li>
+        <li><img src="/modules/core/img/beers/hg.jpg"></li>
+        <li><img src="/modules/core/img/beers/hell.jpg"></li>
+        <li><img src="/modules/core/img/beers/founders.jpg"></li>
+    </ul>
+</aside> -->
+</div>

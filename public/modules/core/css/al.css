@@ -35,10 +35,7 @@ h2 {vertical-align: middle;}
 .smxsBanner h6 {font-family: 'Gilda Display', serif;}
 
 
-
-
-
-#picsCarousel {padding: 8px;background-color: rgba(0, 0, 0, .4);border-right: 2px groove #FF0700;border-left: 2px groove #FF0700;border-bottom: 2px groove #FF0700;}
+#picsCarousel {padding: 8px;background-color: rgba(0, 0, 0, .4);border-top: 2px groove #FF0700; border-right: 2px groove #FF0700;border-left: 2px groove #FF0700;border-bottom: 2px groove #FF0700;}
 .belowCarousel {background-color: black; color: white; text-align: center;}
 
 
@@ -58,4 +55,35 @@ h2 {vertical-align: middle;}
 	text-align: center;vertical-align: middle;
 }
 
-.foot {text-align: center;font-family: 'Gilda Display', serif;}
+.foot {font-family: 'Gilda Display', serif; color:black; margin-bottom: 20px;}
+.foot h5 {text-align: center; }
+
+.CMClink {margin-top: 6px; margin-bottom:15px;}
+.espnTicker {margin-bottom: 20px;}
+
+.foot a {color:#FF0700; text-shadow: 1px 1px #000000;}
+.foot a:hover {color:white;}
+
+.trainStopCallout {background: rgba(0, 0, 0, .8); padding: 14px; color: #565C5C; border: 1px solid white;}
+.trainStopCallout h2 {color: white;} /* #428bca */
+.trainStopCallout h4 {background: rgba(250, 250, 250, .8); color: black; padding: 12px; border: 1px solid #428bca;}
+.trainStopCallout h6 {font-style: italic;}
+.trainStopCallout img {float: right; margin: 10px;}
+.trainContent {background: black; padding: 20px;}
+
+.footballCallout {background: rgba(250, 250, 250, .6);padding: 14px;  margin: 5px; }
+.footballCallout a {color:#000000; text-shadow: 1px 1px #FEC10D;}
+.footballCallout a:hover {color: black;}
+.footballCallout h4 {background: rgba(0, 0, 0, 1); padding: 14px; color: #FEC10D; border: 1px solid #FEC10D;}
+.footballCallout table {border: 1px solid black;}
+.footballCallout thead {background: rgba(0, 0, 0, 1);color: white; font-size: 10px; text-align: center;}
+.footballCallout tbody {font-size: 10px;}
+.home {background: rgba(254, 193, 13, 1);}
+
+
+
+.beerLogos ul {list-style: none; }
+.beerLogos ul li { display: inline-block; margin: 2px;}
+
+
+
