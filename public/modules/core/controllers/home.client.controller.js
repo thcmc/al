@@ -9,6 +9,8 @@ angular.module('core').controller('CarouselDemoCtrl', ['$scope', function ($scop
     	{image: '/modules/core/img/slide6a.jpg'/*,text: 'Entertainment'*/},
 		{image: '/modules/core/img/slide7a.jpg'/*,text: 'Entertainment'*/}
   	];
+
+  
 }]);
 /*
 'use strict';

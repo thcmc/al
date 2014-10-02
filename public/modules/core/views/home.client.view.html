@@ -1,7 +1,7 @@
 <img class="bg", src="/modules/core/img/draftslide.jpg">
 
 <!-- page header -->
-<div class="row">
+<div class="row" ng-controller="HomeController">
     <div class="col-md-8 col-md-offset-2", id="wrap">
         <div class="col-lg-3 pull-right hidden-xs", id="nestedHours">
             <h4>Open Daily</h4>
@@ -27,30 +27,33 @@
         </address>
     </span>
     </div>
-    <div class="col-md-2 hidden-xs hidden-sm">
-    <iframe src="
-//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetAdHtml&ID=OneJS&OneJS=1&banner_type=setandforget&campaigns=primeent&placement=assoc_banner_placement_default&region=US&marketplace=amazon&tracking_id=albslou-20&ad_type=banner&height=125&width=125&linkid=MVOWHECGSFDO3WY5&f=ifr
-" width="125" height="125" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-        <!-- <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=21&l=ur1&category=kitchen&banner=16YJ90NQST9G4GR8SDG2&f=ifr" width="auto" height="110" scrolling="no" marginwidth="0" frameborder="0"></iframe> -->
+    <div class="col-md-2 hidden-xs hidden-sm" ng-repeat="content in homepageContent">
+        <iframe ng-src="{{trustSrc(content.ad1)}}" width="125" height="125" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
     </div>
 </div>
 
 
-<!-- central Content -->
+
 <div class="row">
 
-    <!-- medium -->   
+    <!--LG MD DAILY SPECIALS  -->   
     <section class="col-xs-3 col-md-2 hidden-xs hidden-sm leftLarge">
         <div class="row" ng-controller="dailySpecialsCtrl">
-            <div class="col-md-12 leftBanner1" ng-repeat="special in specials">
+            <h3 align="center" style="background: black; color: grey;">Daily Specials</h3>
+            <aside class="col-md-12 leftBanner1" ng-repeat="special in specials">
                 <h4>{{special.day}}</h4>
                 <h5>{{special.offer}}</h5>
                 <hr>
-            </div>
+            </aside>
+            <aside ng-controller="HomeController">
+                <div ng-repeat="content in homepageContent">
+                <iframe ng-src="{{trustSrc(content.ad4)}}" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </aside>
         </div>
     </section>
 
-    <!-- picture carousel, xs + md -->
+    <!--XS MD CAROUSEL of PICTURES -->
     <section class="col-xs-12 col-md-8", ng-controller="CarouselDemoCtrl" id="picsCarousel">
         <carousel id="carousel" interval="myInterval">
             <slide id="slide" ng-repeat="slide in slides" active="slide.active">
@@ -66,62 +69,17 @@
             <h4>Steps from the Potomac Ave train station in Dormont</h4>
             <h5>Fresh Growlers &diams; 20+ Drafts &diams; TV's &diams; Full-liquor bar</h5>
         </section>
-    </section>
 
-
-
-    <!-- days specials, xs + sm -->
-    <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner">
-        <div class="row" ng-controller="dailySpecialsCtrl">
-            <div class="col-md-12 leftBanner1" ng-repeat="special in specials">
-                <h4>{{special.day}}</h4>
-                <h5>{{special.offer}}</h5>
-                <hr>
-            </div>
-        </div>
-    </section>
-
-    <!-- mobile ad, medium banner, sm + xs -->
-    <aside class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="">
-        <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=26&l=ur1&category=amazonhomepage&f=ifr" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-    </aside>
-
-    <!-- mobile ad, small banner, sm + xs -->
-    <aside class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background: none; margin-top: 3px;">
-        <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=albslou-20&o=1&p=42&l=ur1&category=amazonhomepage&f=ifr" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-    </aside>
-
-    <!-- mobile ads on lg and md -->
-    <aside class="col-xs-3 col-md-2 hidden-xs hidden-sm rightLarge">
-        <div class="col-md-12 rightBanner1">
-            <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=albslou-20&marketplace=amazon&region=US&placement=B004A29QF4&asins=B004A29QF4&linkId=&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066C0&bg_color=000000"></iframe>
-        </div>
-        <div class="col-md-12 rightBanner1">
-            <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=albslou-20&marketplace=amazon&region=US&placement=B00BQ77PSG&asins=B00BQ77PSG&linkId=&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066C0&bg_color=000000"></iframe>
-        </div>
-    </aside>
-    
-</div>
-
-<!-- footer -->
-<div class="row"></div>
-<div class="col-lg-12 foot row" ng-controller="steelersScheduleCtrl">
-    <h5 class="CMClink">Website by <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a></h5>
-
-    <div class="col-md-12 espnTicker" align="center">
-        <iframe src="http://espn.go.com/bottomline/espnewsbottomlinebasic.html" width="640" height="48" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-    </div>
-   
-
-    <hr>
-    
-    <section class="col-md-8 trainStopCallout" align="left">
-        <h4>Headed into the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4>
-        <h2 align="center">Take the Train from Albert's Lounge!</h2>
-        <img src="/modules/core/img/trainad.png">
+        <br>
+        <section class="col-md-12 trainStopCallout" align="left">
+        <!-- <h4>Going to the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4> -->
+        <h4 align="center">Take the Train from Albert's Lounge!</h4>
+        <img class="pull-right" src="/modules/core/img/trainad.png">
         <div class="trainContent">
-            <p><address>2856 Broadway Avenue, Pittsburgh, PA 15216</address> 
-            By TRAIN: <b>42 South Hills Village,  Potomac Avenue stop.</b>
+            <p align="center">
+                <address>2856 Broadway Ave, Pittsburgh, PA 15216</address> 
+            By TRAIN: <b>42 South Hills Village,  Potomac Avenue stop.  <a href="http://www.portauthority.org/paac/SchedulesMaps/TripPlanner.aspx" target="_blank">Port Authority Trip Planner</a></b>
+            <br>
             <br>
             We are in Dormont at the corner of Broadway and Potomac Avenue, steps from the Potomac Avenue train station.  
             <br>
@@ -129,13 +87,108 @@
             Make us your pre-game stop and ride safely into the city via public transportation.  We are directly across from the Cogo's.         
             <br>
             <br>
-            Can't stay long?  Take home a Gallon-sized Growlers of fresh draft beer.
+            Growlers and six pack's to-go also available if you can't stay long.
             </p>
         </div>
     </section>
+    </section>
 
+
+    <!--XS SM DAILY SPECIALS -->
+    <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background-color:black;">
+        <div class="row" ng-controller="dailySpecialsCtrl">
+            <h3 align="center" style="background: black; color: grey;">Daily Specials</h3>
+            <div class="col-md-12 leftBanner1" ng-repeat="special in specials">
+                <h4>{{special.day}}</h4>
+                <h5>{{special.offer}}</h5>
+            </div>
+        </div>
+    </section>
+
+    <!--LG MD DAILY SPECIALS  -->   
+    <section class="col-xs-3 col-md-2 hidden-xs hidden-sm leftLarge">
+        <div class="row" ng-controller="steelersScheduleCtrl">
+            <h3 align="center" style="background: black; color: grey;">PITTSBURGH STEELERS</h3>
+            <h5 align="center"><small>Home games in yellow</small></h5>
+            <ul class="col-md-12 leftBanner1" ng-repeat="game in games" style="list-style: none; font-size: 10px; text-align: center">
+                <li class="{{game.where}}">{{game.date}}  {{game.opponent}}  {{game.time}}</li>
+                <hr>
+            </ul>
+        </div>
+    </section>
+
+    <!--XS SM RIGHT Of CAROUSEL -->
+    <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background-color:black;">
+        <div class="row" ng-controller="steelersScheduleCtrl">
+            <h3 style="background: black; color: grey;">PITTSBURGH STEELERS</h3>
+            <h5 align="center"><small>Home games in yellow</small></h5>
+            <ul class="col-md-12 leftBanner1" ng-repeat="game in games" style="list-style: none; text-align: center">
+                <li class="{{game.where}}">{{game.wk}}  {{game.date}}  {{game.opponent}}  {{game.time}}</li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <!-- <div ng-controller="HomeController">
+        <aside ng-repeat="content in homepageContent"> -->
+        <!--XS SM ADVERTISEMENT -->
+        <!-- <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="">
+            <iframe ng-src="{{trustSrc(content.ad1)}}" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </section> -->
+
+        <!--XS SM ADVERTISEMENT -->
+      <!--   <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background: none; margin-top: 3px;">
+            <iframe ng-src="{{trustSrc(content.ad2)}}" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </section> -->
+
+        <!--LG MD ADVERTISEMENT-->
+        <!-- <section class="col-xs-3 col-md-2 hidden-xs hidden-sm rightLarge">
+            <div class="col-md-12 rightBanner1">
+                <iframe  ng-src="{{trustSrc(content.ad3)}}"style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-12 rightBanner1">
+                <iframe ng-src="{{trustSrc(content.ad4)}}" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe>
+            </div>
+        </section>
+        </aside>
+    </div> -->
+    
+</div>
+
+<!-- footer -->
+<div class="row"></div>
+<div class="col-lg-12 foot row" ng-controller="HomeController">
+    <h5 class="CMClink">Website by <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a></h5>
+
+    <div class="col-md-12 espnTicker" align="center" ng-repeat="content in homepageContent">
+        <iframe ng-src="{{trustSrc(content.ad6)}}" width="640" height="48" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </div>
+   
+<!-- 
+    <hr>
+    
+    <section class="col-md-8 trainStopCallout" align="left">
+        <h4>Going to the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4>
+        <h2 align="center">Take the Train from Albert's Lounge!</h2>
+        <img src="/modules/core/img/trainad.png">
+        <div class="trainContent">
+            <p><address>2856 Broadway Avenue, Pittsburgh, PA 15216</address> 
+            By TRAIN: <b>42 South Hills Village,  Potomac Avenue stop.  <a href="http://www.portauthority.org/paac/SchedulesMaps/TripPlanner.aspx" target="_blank">Port Authority Trip Planner</a></b>
+            <br>
+            <br>
+            We are in Dormont at the corner of Broadway and Potomac Avenue, steps from the Potomac Avenue train station.  
+            <br>
+            <br>
+            Make us your pre-game stop and ride safely into the city via public transportation.  We are directly across from the Cogo's.         
+            <br>
+            <br>
+            CTake home a Gallon-sized Growlers of fresh draft beer.
+            </p>
+        </div>
+    </section>
+ -->
     <!-- steeler schedule -->
-    <aside class="col-md-4" align="center">
+<!--     <aside class="col-md-4" align="center" ng-controller="steelersScheduleCtrl">
         <div class="col-md-11 footballCallout">
         <h6><b><i>ARE YOU READY FOR</i></b></h6>
         <h4>STEELER FOOTBALL !</h4>
@@ -162,7 +215,7 @@
         </table>
         <p><i>Home games in yellow</i></p>
         </div>
-    </aside>
+    </aside> -->
 
     <!-- beerLogos -->
 <!--     <aside class="col-md-12 beerLogos">
