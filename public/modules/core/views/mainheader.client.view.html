@@ -1,0 +1,31 @@
+<!-- page header -->
+<div class="row" ng-controller="HomeController">
+    <div class="col-md-8 col-md-offset-2", id="wrap">
+        <div class="col-lg-3 pull-right hidden-xs", id="nestedHours">
+            <h4>Open Daily</h4>
+            <p>11 am - 2 am</p>
+            <a href="https://www.google.com/maps/place/Albert's+Lounge/@40.397765,-80.036013,17z/data=!3m1!4b1!4m2!3m1!1s0x8834f719eee4d503:0x1bb82d2d1982dc4e", target="_blank", title="Google Map">
+            <i class="fa fa-map-marker"></i> MAP</a>
+        </div>
+
+    <span itemscope itemtype="http://schema.org/LocalBusiness" itemref="_openingHoursSpecification8 _url12">
+        <h1 class="mainTitle">
+        <span itemprop="name">Albert's Lounge</span>&nbsp;
+            <a href="https://www.facebook.com/alberts.dormont" target="_blank"><i class="fa fa-facebook">&nbsp;</i></a>&nbsp;
+            <a href="https://twitter.com/AlbertsLounge"><i class="fa fa-twitter" target="_blank"></i></a>
+        </h1>
+        <address>
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">2856 Broadway Avenue</span>, 
+                <span itemprop="addressLocality">Pittsburgh</span>, 
+                <span itemprop="addressRegion">PA</span> 
+                <span itemprop="postalCode">15216</span>&nbsp;&nbsp;
+            </span>
+            <a href="tel:+14125318774"><i itemprop="telephone" class="fa fa-phone-square">&nbsp; (412) 531-8774</i></a>
+        </address>
+    </span>
+    </div>
+    <div class="col-md-2 hidden-xs hidden-sm" ng-repeat="content in homepageContent">
+        <iframe ng-src="{{trustSrc(content.ad1)}}" width="125" height="125" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    </div>
+</div>

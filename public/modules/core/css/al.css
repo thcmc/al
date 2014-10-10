@@ -35,7 +35,7 @@ h2 {vertical-align: middle;}
 .smxsBanner h6 {font-family: 'Gilda Display', serif;}
 
 
-#picsCarousel {padding: 8px;background-color: rgba(0, 0, 0, .4);border-top: 2px groove #FF0700; border-right: 2px groove #FF0700;border-left: 2px groove #FF0700;border-bottom: 2px groove #FF0700;}
+#picsCarousel {padding: 8px;background-color: rgba(0, 0, 0, 1);border-top: 2px groove #FF0700; border-right: 2px groove #FF0700;border-left: 2px groove #FF0700;border-bottom: 2px groove #FF0700;}
 .belowCarousel {background-color: black; color: white; text-align: center;}
 
 
@@ -68,7 +68,7 @@ h2 {vertical-align: middle;}
 .trainStopCallout h2 {color: white;} /* #428bca */
 .trainStopCallout h4 {background: rgba(250, 250, 250, .8); color: black; padding: 12px; border: 1px solid #428bca;}
 .trainStopCallout h6 {font-style: italic;}
-.trainStopCallout img { margin: 5px; }
+.trainStopCallout img { margin: 5px 5px 15px 5px; }
 .trainContent {background: black; padding: 30px;}
 
 .footballCallout {background: rgba(250, 250, 250, .6);padding: 14px;  margin: 5px; }
@@ -84,6 +84,15 @@ h2 {vertical-align: middle;}
 
 .beerLogos ul {list-style: none; }
 .beerLogos ul li { display: inline-block; margin: 2px;}
+
+.list-group-item {
+	background-color: rgba(0,0,0,.8);
+}
+.adminControlSection {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 4px;
+	margin-top: 90px;
+}
 
 
 

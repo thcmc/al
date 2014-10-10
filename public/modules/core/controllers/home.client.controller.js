@@ -12,6 +12,8 @@ angular.module('core').controller('CarouselDemoCtrl', ['$scope', function ($scop
 
   
 }]);
+
+
 /*
 'use strict';
 
