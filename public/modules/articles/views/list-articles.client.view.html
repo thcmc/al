@@ -1,4 +1,4 @@
-<section data-ng-controller="ArticlesController" data-ng-init="find()">
+<!-- <section data-ng-controller="ArticlesController" data-ng-init="find()">
     <div class="page-header">
         <h1>Articles</h1>
     </div>
@@ -12,4 +12,32 @@
     <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">
     	No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
     </div>
-</section>
+</section> -->
+
+
+    <section data-ng-controller="ArticlesController" data-ng-init="find()">
+
+
+        <div class="page-header col-md-12">
+            <div class="row">
+                <h1 class="col-md-9">Albert's Lounge - Announcements Archive</h1>
+            </div>
+        </div>
+
+        <!-- ARTICLE LISTING -->
+        <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+            <a data-ng-repeat="article in articles | limitTo:articleLimit" data-ng-href="#!/articles/{{article._id}}" class="list-group-item ArticleContainer">
+                <h4>
+                    <b>{{article.title}}</b>
+                    <span class="text-muted hidden-xs" style="float: right;">{{article.created | date:'medium'}}
+                    </span>
+                </h4>
+                <!-- 
+                <p ta-bind="text" ng-model="article.content" ta-readonly='disabled'>{{article.content | limitTo:numLimit}}</p>
+                <img src="https://graph.facebook.com/#{me.id}/picture?type=large" style="float: right;"> 
+                <small class="" align="left"><i class="fa fa-clock-o"></i>&nbsp; {{article.created | date:'medium'}}&nbsp; <i class="fa fa-ellipsis-h">&nbsp;&nbsp;</i> {{article.user.displayName}}</small> 
+                -->
+            </a>
+        </div>
+
+    </section>

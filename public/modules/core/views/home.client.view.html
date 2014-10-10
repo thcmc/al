@@ -48,21 +48,24 @@
                 </aside>
             </div>
             <aside data-ng-controller="HomeController">
-                <div ng-repeat="content in homepageContent">
+                <div align="center" ng-repeat="content in homepageContent">
                 <iframe ng-src="{{trustSrc(content.ad4)}}" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe>
                 </div>
             </aside>
+            <img class="img-responsive" src="/modules/articles/img/St-bottles.jpg" alt="">
         </div>
     </section>
 
     <!--XS MD CAROUSEL of PICTURES -->
-    <section class="col-xs-12 col-md-8", ng-controller="CarouselDemoCtrl" id="picsCarousel">
+    <section class="col-xs-12 col-md-8",  id="picsCarousel">
+        <div ng-controller="CarouselDemoCtrl">
         <carousel id="carousel" interval="myInterval">
             <slide id="slide" ng-repeat="slide in slides" active="slide.active">
                 <img id="imgSlides" ng-src="{{slide.image}}" style="margin:auto;">
                 <div class="carousel-caption"></div>
             </slide>
         </carousel>
+        </div>
         <section class="col-md-12 visible-md belowCarousel">
             <h2>Fresh Growlers</h2>
             <h3>Steps from Potomac Ave train station</h3>
@@ -74,25 +77,49 @@
 
         <br>
         <section class="col-md-12 trainStopCallout" align="left">
-        <!-- <h4>Going to the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4> -->
-        <h4 align="center">Take the Train from Albert's Lounge!</h4>
-        <img class="pull-right" src="/modules/core/img/trainad.png">
-        <div class="trainContent">
-            <p align="center">
-                <address>2856 Broadway Ave, Pittsburgh, PA 15216</address> 
-            By TRAIN: <b>42 South Hills Village,  Potomac Avenue stop.  <a href="http://www.portauthority.org/paac/SchedulesMaps/TripPlanner.aspx" target="_blank">Port Authority Trip Planner</a></b>
-            <br>
-            <br>
-            We are in Dormont at the corner of Broadway and Potomac Avenue, steps from the Potomac Avenue train station.  
-            <br>
-            <br>
-            Make us your pre-game stop and ride safely into the city via public transportation.  We are directly across from the Cogo's.         
-            <br>
-            <br>
-            Growlers and six pack's to-go also available if you can't stay long.
-            </p>
-        </div>
-    </section>
+            <!-- <h4>Going to the game?&nbsp;&nbsp;&nbsp;  PIRATES | STEELERS | PENGUINS | RIVERHOUNDS</h4> -->
+            <h4 align="center">Take the Train from Albert's Lounge!</h4>
+            <img class="pull-right" src="/modules/core/img/trainad.png">
+            <div class="trainContent">
+                <p align="center">
+                    <address>2856 Broadway Ave, Pittsburgh, PA 15216</address> 
+                By TRAIN: <b>Potomac Avenue stop.  <a href="http://www.portauthority.org/paac/SchedulesMaps/TripPlanner.aspx" target="_blank">Port Authority Trip Planner</a></b>
+                <br>
+                <br>
+                We are in Dormont at the corner of Broadway and Potomac Avenue, steps from the Potomac Avenue train station.  We are directly across from the Cogo's.
+                <br>
+                <br>
+                Pre-game events and ride safely into the city via public transportation.           
+                <br>
+                <br>
+                Growlers and six pack's to-go available.
+                </p>
+            </div>
+        </section>
+        <section class="col-md-12 trainStopCallout" ng-controller="ArticlesController" data-ng-init="find()" style="margin-top: 0;">
+            <h4 align="center">Albert's Dormont News!</h4>
+            <article class="col-md-6" ng-repeat="article in articles">
+                <h3 align="left"><!-- <small class="text-muted">{{article.created | date:'shortDate'}}</small>  ----><b> {{article.title}}</b></h3>
+
+                <!-- editing icons (if authenticated) -->
+                <!-- <div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+                    <a class="btn btn-sm btn-info" href="/#!/articles/{{article._id}}/edit">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </a>
+                    <a class="btn btn-sm btn-danger" href="/#!/articles/{{article._id}}">
+                        <i class="fa fa-trash"> (cannot be recovered)</i>
+                    </a>
+                </div> -->
+
+                <!-- ARTICLE Content -->
+                <h5 class="lead articleContent" ta-bind="text" ng-model="article.content" ta-readonly='disabled'>
+                    <span class="theLatestContent">{{article.content}}</span>
+                </h5>
+            </article>
+            
+        </section>
+    
+
     </section>
 
 
@@ -106,9 +133,15 @@
             </div>
         </div>
     </section>
+    <!--XS SM image -->
+    <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background-color:black;">
+        <img class="img-responsive" src="/modules/articles/img/St-bottles.jpg" alt="">
+    </section>
+
 
     <!--LG MD DAILY SPECIALS  -->   
     <section class="col-xs-3 col-md-2 hidden-xs hidden-sm leftLarge">
+        <img style="margin-top: 12px;" class="img-responsive" src="/modules/articles/img/ST-taps.jpg" alt="">
         <div class="row" ng-controller="steelersScheduleCtrl">
             <h3 align="center" style="background: black; color: grey;">PITTSBURGH STEELERS</h3>
             <h5 align="center"><small>Home games in yellow</small></h5>
@@ -123,7 +156,7 @@
     <section class="col-xs-12 col-md-2 visible-sm visible-xs smxsBanner" style="background-color:black;">
         <div class="row" ng-controller="steelersScheduleCtrl">
             <h3 style="background: black; color: grey;">PITTSBURGH STEELERS</h3>
-            <h5 align="center"><small>Home games in yellow</small></h5>
+            <h5  align="center"><small >Home games in yellow</small></h5>
             <ul class="col-md-12 leftBanner1" ng-repeat="game in games" style="list-style: none; text-align: center">
                 <li class="{{game.where}}">{{game.wk}}  {{game.date}}  {{game.opponent}}  {{game.time}}</li>
                 
@@ -160,7 +193,10 @@
 <!-- footer -->
 <div class="row"></div>
 <div class="col-lg-12 foot row" ng-controller="HomeController">
-    <h5 class="CMClink">Website by <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a></h5>
+    <h5 class="CMClink">Website by 
+        <a id="_url12" itemprop="url" href="http://www.creativemonsterconsulting.com" target="_blank" title"Creative Monster Consulting &diams; Pittsburgh">CMC,LLC.</a>
+        <!-- <a href="#!/articles"><i class="fa fa-newspaper-o"></i></a> -->
+    </h5>
 
     <div class="col-md-12 espnTicker" align="center" ng-repeat="content in homepageContent">
         <iframe ng-src="{{trustSrc(content.ad6)}}" width="640" height="48" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>

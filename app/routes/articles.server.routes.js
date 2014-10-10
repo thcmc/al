@@ -13,7 +13,7 @@ module.exports = function(app) {
 		.post(users.requiresLogin, articles.create);
 	
 	app.route('/articles/:articleId')
-		.get(articles.read)
+		.get(users.requiresLogin, articles.read)
 		.put(users.requiresLogin, articles.hasAuthorization, articles.update)
 	    .delete(users.requiresLogin, articles.hasAuthorization, articles.delete);
 

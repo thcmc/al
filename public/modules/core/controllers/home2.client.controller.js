@@ -4,7 +4,7 @@ angular.module('core').controller('HomeController', ['$scope', '$sce', 'homepage
     
 	$scope.trustSrc = function(src) {
 	return $sce.trustAsResourceUrl(src);
-	}
+	};
 	
     
   	$scope.homepageContent = {};

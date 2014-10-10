@@ -14,7 +14,7 @@ angular.module('core').controller('steelersScheduleCtrl', ['$scope', function($s
     	// {wk: '2', date: 'Thu 9/11', opponent: 'Baltimore', time:'8:25 PM CBS/NFL', where: 'away'},
     	// {wk: '3', date: 'Sun 9/21', opponent: 'Carolina', time:'8:30 PM NBC', where: 'away'},
     	// {wk: '4', date: 'Sun 9/28', opponent: 'Tampa Bay', time:'1:00 PM FOX', where: 'home'},
-		  {wk: '5', date: 'Sun 10/5', opponent: 'Jacksonville', time:'1:00 PM CBS', where: 'away'},
+		  // {wk: '5', date: 'Sun 10/5', opponent: 'Jacksonville', time:'1:00 PM CBS', where: 'away'},
 		  {wk: '6', date: 'Sun 10/12', opponent: 'Cleveland', time:'1:00 PM CBS', where: 'away'},
 		  {wk: '7', date: 'Mon 10/20', opponent: 'Houston', time:'8:30 PM ESPN/WatchESPN', where: 'home'},
       {wk: '8', date: 'Sun 10/26', opponent: 'Indianapolis', time:'4:25 PM CBS', where: 'home'},

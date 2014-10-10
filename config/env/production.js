@@ -9,9 +9,9 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
 				'public/modules/core/css/bootstrap.css',
 				'public/modules/core/css/al.css',
+				'//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
 				'https://fonts.googleapis.com/css?family=Allura',
-				'https://fonts.googleapis.com/css?family=Gilda+Display',
-				'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+				'https://fonts.googleapis.com/css?family=Gilda+Display'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -19,7 +19,10 @@ module.exports = {
 				'public/lib/angular-animate/angular-animate.min.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js',
+				'http://cdn.jsdelivr.net/g/angular.textangular@1.2.2(textAngular-sanitize.min.js+textAngular.min.js)',
+				'//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
 			]
 		},
 		css: 'public/dist/application.min.css',
